@@ -32,7 +32,7 @@ glossary <- bind_rows(common_words, place_names) %>%
   group_by(word_ascii_lower) %>%
   slice(1)
 
-add_macron <- function(string, sep) {
+add_macron <- function(string, sep = " ") {
   data.frame(str_split(string, sep), stringsAsFactors = FALSE) %>%
     rename(word_ascii_input = 1) %>%
     mutate(word_ascii_lower = tolower(word_ascii_input)) %>%

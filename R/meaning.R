@@ -10,7 +10,7 @@ common_words_full <- read_excel("data/common_words.xlsx") %>%
   mutate(word_ascii = stri_trans_general(word_macron, "Latin-ASCII"),
          word_ascii_lower = tolower(word_ascii))
 
-meaning <- function(string, sep) {
+meaning <- function(string, sep = " ") {
   data.frame(str_split(string, sep), stringsAsFactors = FALSE) %>%
     rename(word_ascii_input = 1) %>%
     mutate(word_ascii_lower = tolower(word_ascii_input)) %>%
