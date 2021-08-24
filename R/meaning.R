@@ -8,6 +8,7 @@ library(dplyr)
 library(stringr)
 library(readxl)
 library(stringi)
+library(magrittr)
 
 common_words_full <- read_excel("data/common_words.xlsx") %>%
   group_by(word_macron = Word) %>%

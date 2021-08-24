@@ -6,6 +6,7 @@
 library(dplyr)
 library(stringr)
 library(readxl)
+library(magrittr)
 
 unicodes <- read_excel("data/unicodes.xlsx")
 
