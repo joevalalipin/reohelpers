@@ -3,6 +3,7 @@
 #' @import readr
 #' @import readxl
 #' @import stringi
+#' @import magrittr
 
 library(dplyr)
 library(stringr)

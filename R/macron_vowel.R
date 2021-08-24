@@ -1,7 +1,8 @@
 #' @import dplyr
 #' @import stringr
 #' @import readxl
-
+#' @import magrittr
+#'
 library(dplyr)
 library(stringr)
 library(readxl)
