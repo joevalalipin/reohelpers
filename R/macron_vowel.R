@@ -1,14 +1,12 @@
 #' @import dplyr
 #' @import stringr
-#' @import readxl
 #' @import magrittr
-#'
+
 library(dplyr)
 library(stringr)
-library(readxl)
 library(magrittr)
 
-unicodes <- read_excel("data/unicodes.xlsx")
+load("data/unicodes.rdata")
 
 macron_vowel <- function(string) {
   data.frame(str_split(string, ""), stringsAsFactors = FALSE) %>%

@@ -1,21 +1,12 @@
 #' @import dplyr
 #' @import stringr
-#' @import readxl
-#' @import stringi
 #' @import magrittr
 
 library(dplyr)
 library(stringr)
-library(readxl)
-library(stringi)
 library(magrittr)
 
-common_words_full <- read_excel("data/common_words.xlsx") %>%
-  group_by(word_macron = Word) %>%
-  summarise(meaning = paste0(`Its more frequent meanings`, collapse = "; OR ")) %>%
-  distinct() %>%
-  mutate(word_ascii = stri_trans_general(word_macron, "Latin-ASCII"),
-         word_ascii_lower = tolower(word_ascii))
+load("data/common_words_full.rdata")
 
 meaning <- function(string, sep = " ") {
   data.frame(str_split(string, sep), stringsAsFactors = FALSE) %>%
