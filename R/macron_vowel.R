@@ -1,3 +1,7 @@
+#' @import dplyr
+#' @import stringr
+#' @import readxl
+
 library(dplyr)
 library(stringr)
 library(readxl)
