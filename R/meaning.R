@@ -8,6 +8,7 @@ library(magrittr)
 
 load("data/common_words_full.rdata")
 
+#' @export
 meaning <- function(string, sep = " ") {
   data.frame(str_split(string, sep), stringsAsFactors = FALSE) %>%
     rename(word_ascii_input = 1) %>%

@@ -8,6 +8,7 @@ library(magrittr)
 
 load("data/unicodes.rdata")
 
+#' @export
 macron_vowel <- function(string) {
   data.frame(str_split(string, ""), stringsAsFactors = FALSE) %>%
     rename(vowel_ascii = 1) %>%

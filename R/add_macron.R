@@ -2,12 +2,14 @@
 #' @import stringr
 #' @import magrittr
 
+
 library(dplyr)
 library(stringr)
 library(magrittr)
 
 load("data/glossary.rdata")
 
+#' @export
 add_macron <- function(string, sep = " ") {
   data.frame(str_split(string, sep), stringsAsFactors = FALSE) %>%
     rename(word_ascii_input = 1) %>%
@@ -19,3 +21,4 @@ add_macron <- function(string, sep = " ") {
     paste0(collapse = sep)
 }
 add_macron <- Vectorize(add_macron)
+
