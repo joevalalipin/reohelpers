@@ -5,7 +5,7 @@
 meaning(string, sep = " ")
 }
 \description{
-This is a function that returns a dataframe of meanings of each word in a gven string.
+This is a function that returns a dataframe of meanings of each word in a given string.
 }
 \examples{
 meaning("reo")

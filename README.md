@@ -6,7 +6,7 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of reohelpers is to …
+The goal of reohelpers is to make te reo easier to use in R.
 
 ## Installation
 
@@ -19,38 +19,33 @@ you can install the development version from
 devtools::install_github("joevalalipin/reohelpers")
 ```
 
-## Example
+## Overview
 
-This is a basic example which shows you how to solve a common problem:
+-   `add_macron()` adds macrons appropriately to vowels in te reo words
+    or phrases.
+-   `macron_vowel()` adds macrons to single or multiple vowels in a
+    given string.
+-   `meaning()` returns a dataframe of meanings of each word in a given
+    string.
+
+## Examples
+
+### add\_macron()
 
 ``` r
-library(reohelpers)
-## basic example code
+ggplot(mtcars, aes(x = cyl, y = hp, group = cyl)) +
+  geom_boxplot() +
+  labs(title = add_macron("Number of cylinders and horsepower in motoka dataset")) +
+  theme_classic()
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
+<img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />
+
+### macron\_vowels()
 
 ``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
+# data.frame(vowel = c("a", "e", "i", "o", "u")) %>% 
+#   mutate(macrons = macron_vowel(vowel))
 ```
 
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this. You could also
-use GitHub Actions to re-render `README.Rmd` every time you push. An
-example workflow can be found here:
-<https://github.com/r-lib/actions/tree/master/examples>.
-
-You can also embed plots, for example:
-
-<img src="man/figures/README-pressure-1.png" width="100%" />
-
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub and CRAN.
+### meaning()
