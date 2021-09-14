@@ -2,8 +2,7 @@ Package: reohelpers
 Type: Package
 Title: Making te reo easier to use in R
 Version: 0.1.0
-Author: Joe Val Alipin
-Maintainer: joe.valalipin@mfe.govt.nz
+Author: MFE DCM
 Description: A package of functions that make it easier to add appropriate macrons to te reo words to aid data manipulation and visualisation.
 License: 
 Encoding: UTF-8
