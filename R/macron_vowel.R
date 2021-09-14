@@ -17,4 +17,3 @@ macron_vowel <- function(string) {
     pull(vowel) %>%
     paste0(collapse = "")
 }
-vowel_macron <- Vectorize(macron_vowel)

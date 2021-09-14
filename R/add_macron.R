@@ -21,4 +21,3 @@ add_macron <- function(string, sep = " ") {
     paste0(collapse = sep)
 }
 add_macron <- Vectorize(add_macron)
-
