@@ -72,10 +72,7 @@ infringements %>%
 
 
 ### macron_vowel()
-If for any reason you need to add macron to a specific character in a string:
-```{r, dev = "cairo_pdf"}
-macron_vowel("a")
-```
+If for any reason you need to add macron to a specific character in a string use `macron_vowel()`: `r macron_vowel("a e i o u")`
 
 ### meaning()
 A quick way to get the meaning of te reo words. 

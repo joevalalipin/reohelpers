@@ -79,12 +79,7 @@ infringements %>%
 ### macron\_vowel()
 
 If for any reason you need to add macron to a specific character in a
-string:
-
-``` r
-macron_vowel("a")
-#> [1] "a"
-```
+string use `macron_vowel()`: ā ē ī ō ū
 
 ### meaning()
 
